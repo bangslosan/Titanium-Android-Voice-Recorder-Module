@@ -1,0 +1,18 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name VoicerecorderBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "com.hybridtechja.voice.ExampleProxy.h"
+#include "com.hybridtechja.voice.VoicerecorderModule.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+com.hybridtechja.voice.ExampleProxy, ::com::hybridtechja::voice::voicerecorder::ExampleProxy::bindProxy, ::com::hybridtechja::voice::voicerecorder::ExampleProxy::dispose
+com.hybridtechja.voice.VoicerecorderModule, ::com::hybridtechja::voice::VoicerecorderModule::bindProxy, ::com::hybridtechja::voice::VoicerecorderModule::dispose
+%%
